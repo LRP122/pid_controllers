@@ -46,6 +46,9 @@ namespace WIFI
         void SetCredentials(const char *ssid, const char *password);
         void wifi_setup();
         void wifi_run();
+
+        void connect_to_wifi();
+        
         esp_err_t Init();
         esp_err_t Begin(void);
         WIFI::Wifi::state_e wifiState { WIFI::Wifi::state_e::NOT_INITIALIZED };

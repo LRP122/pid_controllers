@@ -270,6 +270,19 @@ void Wifi::wifi_setup(){
 
 }
 
+void Wifi::connect_to_wifi(){
+
+    Wifi::wifi_setup();
+
+    char *ourTaskName = pcTaskGetName(NULL);
+    ESP_LOGI(ourTaskName, "Starting Up!\n");
+
+    while(Wifi::GetState() != WIFI::Wifi::state_e::CONNECTED){
+        vTaskDelay(pdMS_TO_TICKS(1000));
+        Wifi::wifi_run();
+    }
+}
+
 
 } // namespace WIFI
 

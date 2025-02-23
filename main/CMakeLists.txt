@@ -8,3 +8,4 @@ set(HELPER_CPP ../main/helper.cpp)
   
 idf_component_register(SRCS main.cpp  ${CALCULATIONS_CPP} ${MQTT_CPP} ${WIFI_CPP}
                     INCLUDE_DIRS "."  ${CALCULATIONS_DIR} ${MQTT_DIR} ${WIFI_DIR})
+
